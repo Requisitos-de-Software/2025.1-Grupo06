@@ -1,0 +1,5027 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/modelagem/casosdeuso/">
+      
+      
+        <link rel="prev" href="../cenarios/">
+      
+      
+        <link rel="next" href="../lexicos/">
+      
+      
+      <link rel="icon" href="../../assets/receita-federal.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Casos de uso - Receita Federal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="dark-blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documento-de-casos-de-uso-do-aplicativo-da-receita-federal-do-brasil" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Receita Federal" class="md-header__button md-logo" aria-label="Receita Federal" data-md-component="logo">
+      
+  <img src="../../assets/receita-federal.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Receita Federal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Casos de uso
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="dark-blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="dark-blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Requisitos-de-Software/2025.1-ReceitaFederal.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2025.1-ReceitaFederal
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Receita Federal" class="md-nav__button md-logo" aria-label="Receita Federal" data-md-component="logo">
+      
+  <img src="../../assets/receita-federal.png" alt="logo">
+
+    </a>
+    Receita Federal
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Requisitos-de-Software/2025.1-ReceitaFederal.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2025.1-ReceitaFederal
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Início
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guias
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Guias
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guias/tutorial-mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tutorial mkdocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apresentações
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Apresentações
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apresentacoes/apresentacao1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apresentação 1 (Etapa 01)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apresentacoes/apresentacao2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apresentação 2 (Etapa 02)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apresentacoes/apresentacao3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apresentação 3 (Etapa 03)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apresentacoes/apresentacao4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apresentação 4 (Etapa 04)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apresentacoes/apresentacao5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apresentação 5 (Etapa 06)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apresentacoes/apresentacao6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apresentação 6 (Etapa 05)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Inspeção
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Inspeção
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrega 01 (Etapa 01)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Entrega 01 (Etapa 01)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inspecao/entrega01/inspecao-grupo6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grupo 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inspecao/entrega01/inspecao-grupo7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grupo +1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrega 02 (Etapa 02)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Entrega 02 (Etapa 02)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inspecao/entrega02/inspecao-grupo6.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grupo 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inspecao/entrega02/inspecao-grupo7-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grupo +1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrega 03 (Etapa 03)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Entrega 03 (Etapa 03)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inspecao/entrega03/inspecao-grupo6-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grupo 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inspecao/entrega03/inspecao-grupo7-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grupo +1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrega 04 (Etapa 04):
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Entrega 04 (Etapa 04):
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inspecao/entrega04/inspecao-grupo6-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grupo 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inspecao/entrega04/inspecao-grupo7-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grupo +1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrega 05 (Etapa 06)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Entrega 05 (Etapa 06)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inspecao/entrega05/inspecao-grupo6-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grupo 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inspecao/entrega05/inspecao-grupo7-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grupo +1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrega 06 (Etapa 05)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Entrega 06 (Etapa 05)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inspecao/entrega06/inspecao-grupo7-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grupo +1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Atas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Atas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ata 01 (11/04/2025)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ata 02 (19/04/2025)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ata 03 (21/04/2025)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ata 04 (09/05/2025)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ata 05 (25/05/2025)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ata 06 (13/06/2025)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pré-Rastreabilidade
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Pré-Rastreabilidade
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-rastreabilidade/richpicture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RichPicture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Planejamento
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Planejamento
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planejamento/selecao-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    App selecionado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planejamento/ferramentas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ferramentas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planejamento/heatmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Heatmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planejamento/cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cronograma
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planejamento/cronograma-executado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cronograma Executado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Elicitação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Elicitação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elicitacao/personas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Personas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elicitacao/storytelling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Storytelling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elicitacao/analisededocumentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Análise de documentos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elicitacao/introspeccao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introspecção
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elicitacao/entrevista/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entrevista
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Priorização
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Priorização
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elicitacao/priorizacao/ftf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    First Things First
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elicitacao/priorizacao/MoSCoW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MoSCoW
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elicitacao/priorizacao/100%24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    100$
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elicitacao/priorizacao/QFD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    QFD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elicitacao/requisitos-elicitados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Requisitos Elicitados
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modelagem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Modelagem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cenarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cenários
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Casos de uso
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Casos de uso
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabela-de-atividades-feitas-por-membro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela de atividades feitas - por membro
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia-utilizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metodologia Utilizada
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descricao-do-diagrama-de-caso-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrição do Diagrama de Caso de Uso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descrição do Diagrama de Caso de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-1-elementos-do-diagrama-de-casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela 1: Elementos do Diagrama de Casos de Uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Atores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ator-primario-contribuinte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ator Primário: Contribuinte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ator-secundario-auditor-da-receita" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ator Secundário: Auditor da Receita
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descricao-geral-dos-diagramas-realizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrição Geral dos Diagramas Realizados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descrição Geral dos Diagramas Realizados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-casos-de-uso-requisitos-implementados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama de Casos de Uso: Requisitos Implementados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-01-uc01" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 01 - (UC01)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-02-uc02" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 02 - (UC02)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-07-uc07" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 07 - (UC07)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-08-uc08" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 08 - (UC08)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-09-uc09" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 09 - (UC09)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-10-uc10" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 10 - (UC10)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-11-uc11" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 11 - (UC11)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-12-uc12" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 12 - (UC12)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pré-condições
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pós-condições
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacionamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relacionamentos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relacionamentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pontos-de-extensao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pontos de Extensão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pontos-de-inclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pontos de Inclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compreensao-do-diagrama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compreensão do Diagrama
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compreensão do Diagrama">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de Uso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autenticação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autenticação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#realizar-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Realizar Login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recuperar-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recuperar Senha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validar-acesso-via-govbr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validar Acesso via Gov.br
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultas-gerais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultas Gerais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consultas Gerais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consultar-situacao-fiscal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultar Situação Fiscal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atualizar-dados-cadastrais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atualizar Dados Cadastrais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultar-processos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultar Processos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agendar-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agendar Atendimento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagar-tributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pagar Tributos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declaracao-de-imposto-de-renda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaração de Imposto de Renda
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Declaração de Imposto de Renda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preencher-declaracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preencher Declaração
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9352-enviar-declaracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.5.2 Enviar Declaração
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultar-recibo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultar Recibo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restituicao-de-ir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restituição de IR
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Restituição de IR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consultar-lotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultar Lotes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atualizar-dados-bancarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atualizar Dados Bancários
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emitir-comprovante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emitir Comprovante
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segurança
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usabilidade
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      RELACIONAMENTO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videos-de-validacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vídeos de validação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vídeos de validação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validacao-do-caso-de-uso-01-uc01-e-caso-de-uso-02-uc02" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validação do Caso de Uso 01 - (UC01) e Caso de Uso 02 - (UC02)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lexicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Léxicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../especificacao-suplementar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Especificação Suplementar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modelagem ágil
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Modelagem ágil
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modelagem-agil/nfr-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NFR Framework
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modelagem-agil/historias-usuario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Histórias de usuário
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modelagem-agil/backlog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backlog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Rastreabilidade
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Rastreabilidade
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rastreabilidade/matriz-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Matriz Geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rastreabilidade/pos-rastreabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pós-Rastreabilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Verificação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Verificação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verificacao/planejamento-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planejamento geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrega 01
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_2">
+            <span class="md-nav__icon md-icon"></span>
+            Entrega 01
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verificacao/entrega1/planejamento1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planejamento de verificação - Entrega 01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verificacao/entrega1/richpicture-ver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rich Picture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mudarisso/mudar.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CONTINUA AQUI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_4" id="__nav_12_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrega 03
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_4">
+            <span class="md-nav__icon md-icon"></span>
+            Entrega 03
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verificacao/entrega3/planejamento3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planejamento de verificação - Entrega 03
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verificacao/entrega3/lista-cenarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cenários
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verificacao/entrega3/lista-lexicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Léxicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verificacao/entrega3/lista-casosdeuso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Casos de uso
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verificacao/entrega3/lista-espsup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Especificação Suplementar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_5" id="__nav_12_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrega 04
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_5">
+            <span class="md-nav__icon md-icon"></span>
+            Entrega 04
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verificacao/entrega4/planejamento4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planejamento de verificação - Entrega 04
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verificacao/entrega4/lista-nfrframework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NFR Framework
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verificacao/entrega4/lista-us/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Histórias de usuário
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verificacao/entrega4/lista-backlog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backlog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Validação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Validação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../validacao/prototipacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prototipação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../validacao/comprovante-informal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprovação Informal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrega final
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Entrega final
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entrega-final/app-selecionado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aplicativo selecionado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entrega-final/cronograma-executado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cronograma Executado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entrega-final/ferramentas-utilizadas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ferramentas utilizadas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entrega-final/tecnica-utilizada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tecnicas utilizadas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entrega-final/artefatos-criados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Artefatos criados
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entrega-final/resultados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resultados alcançados
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entrega-final/verificacao-validacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verificação e validação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entrega-final/apresentacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apresentações
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entrega-final/consideracoes-finais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Considerações finais
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabela-de-atividades-feitas-por-membro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela de atividades feitas - por membro
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia-utilizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metodologia Utilizada
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descricao-do-diagrama-de-caso-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrição do Diagrama de Caso de Uso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descrição do Diagrama de Caso de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-1-elementos-do-diagrama-de-casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela 1: Elementos do Diagrama de Casos de Uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Atores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ator-primario-contribuinte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ator Primário: Contribuinte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ator-secundario-auditor-da-receita" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ator Secundário: Auditor da Receita
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descricao-geral-dos-diagramas-realizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrição Geral dos Diagramas Realizados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descrição Geral dos Diagramas Realizados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-casos-de-uso-requisitos-implementados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama de Casos de Uso: Requisitos Implementados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-01-uc01" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 01 - (UC01)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-02-uc02" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 02 - (UC02)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-07-uc07" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 07 - (UC07)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-08-uc08" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 08 - (UC08)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-09-uc09" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 09 - (UC09)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-10-uc10" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 10 - (UC10)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-11-uc11" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 11 - (UC11)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-de-uso-12-uc12" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASO DE USO 12 - (UC12)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pré-condições
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pós-condições
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacionamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relacionamentos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relacionamentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pontos-de-extensao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pontos de Extensão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pontos-de-inclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pontos de Inclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compreensao-do-diagrama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compreensão do Diagrama
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compreensão do Diagrama">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atores_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de Uso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autenticação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autenticação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#realizar-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Realizar Login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recuperar-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recuperar Senha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validar-acesso-via-govbr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validar Acesso via Gov.br
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultas-gerais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultas Gerais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consultas Gerais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consultar-situacao-fiscal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultar Situação Fiscal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atualizar-dados-cadastrais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atualizar Dados Cadastrais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultar-processos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultar Processos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agendar-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agendar Atendimento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagar-tributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pagar Tributos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declaracao-de-imposto-de-renda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaração de Imposto de Renda
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Declaração de Imposto de Renda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preencher-declaracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preencher Declaração
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9352-enviar-declaracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.5.2 Enviar Declaração
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultar-recibo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultar Recibo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restituicao-de-ir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restituição de IR
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Restituição de IR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consultar-lotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultar Lotes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atualizar-dados-bancarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atualizar Dados Bancários
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emitir-comprovante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emitir Comprovante
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segurança
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usabilidade
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      RELACIONAMENTO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videos-de-validacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vídeos de validação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vídeos de validação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validacao-do-caso-de-uso-01-uc01-e-caso-de-uso-02-uc02" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validação do Caso de Uso 01 - (UC01) e Caso de Uso 02 - (UC02)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="documento-de-casos-de-uso-do-aplicativo-da-receita-federal-do-brasil">Documento de Casos de Uso do Aplicativo da Receita Federal do Brasil</h1>
+<h2 id="introducao">Introdução</h2>
+<p>Caso de uso é uma modelagem descritiva de sequência de interações entre atores e um sistema específico que resulta em um resultado que permite compreensões necessárias ao desenvolvimento de uma atividade. No nosso trabalho, o sistema é o da Receita Federal do Brasil, e estabelecemos relações entre o ator primário (contribuintes) e o secundário (servidor do órgão).</p>
+<p>O documento apresenta os diagramas de casos de uso do aplicativo da Receita Federal do Brasil (RFB). O aplicativo é uma ferramenta digital cujo propósito é facilitar o acesso dos cidadãos a serviços fiscais, como consulta à situação cadastral, acompanhamento de restituições e entrega de declarações.</p>
+<p>Este documento foca em funcionalidades típicas para o cidadão usuário do app. A modelagem descrita visa mapear as interações entre os usuários e o sistema, bem como os requisitos já implementados e os previstos.</p>
+<h2 id="tabela-de-atividades-feitas-por-membro">Tabela de atividades feitas - por membro</h2>
+<p style="text-align: center"><b>Tabela 1</b> - Tabela de atividades feitas - por membro </p>
+
+<table>
+<thead>
+<tr>
+<th>Nome</th>
+<th>Atividade entregue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/andrewslopes">Andre Lopes</a></td>
+<td>Criação da documentação geral do artefato</td>
+</tr>
+<tr>
+<td><a href="https://github.com/JuliaReis18">Julia Massuda</a></td>
+<td>Criação do diagrama de usos, descrições do diagrama <br> Cartões de casos de uso  (UC09 e UC10)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jevprado">Jose Eduardo</a></td>
+<td>Revisor dos artefatos <br> Cartões de casos de uso (UC 01 e UC02)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/JpRodrigues2">João Pedro</a></td>
+<td>Cartões de casos de uso  (UC07 e UC08)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Diaxiz">Diassis</a></td>
+<td>Cartões de casos de uso  (UC11 e UC12)</td>
+</tr>
+</tbody>
+</table>
+<p><font size="3"><p style="text-align: center">Fonte: <a href="https://github.com/jevprado">Jose Eduardo   </a>, 2025.</p></font></p>
+<h2 id="metodologia-utilizada">Metodologia Utilizada</h2>
+<p>A metodologia adotada para a confecção dos diagramas seguiu os princípios da UML (Unified Modeling Language). A equipe utilizou o quadro de modelo de negócios Canvas para alinhar objetivos, atores envolvidos e funcionalidades do sistema.</p>
+<p>A validação parcial foi realizada com base em funcionalidades reais do aplicativo e dados públicos disponíveis no site da Receita Federal. A metodologia adotada assegura que os casos de uso identifiquem de modo claro e fiel a atuação do sistema.</p>
+<h2 id="descricao-do-diagrama-de-caso-de-uso">Descrição do Diagrama de Caso de Uso</h2>
+<p>O diagrama de casos de uso é uma representação gráfica das funcionalidades do aplicativo sob a ótica dos usuários. Ele identifica quais ações estão disponíveis para cada ator (pessoas, sistemas externos ou dispositivos que possam interagir com o sistema em estudo), representando a relação entre os serviços oferecidos e os perfis que interagem com o sistema.</p>
+<p>Esse diagrama é fundamental para comunicar os requisitos funcionais a desenvolvedores, analistas e demais interessados no projeto. Como componentes do diagrama, utilizou-se ícones (bonecos-palito) para representar os atores. Para o sistema, a representação se deu por meio de um retângulo delimitador do cenário. Para os casos de uso, utilizamos verbos no infinitivo em uma elipse horizontal.</p>
+<p>Os relacionamentos foram representados por semirretas características, caso se tratasse de associação, inclusão (include), extensão (extend) ou generalização.</p>
+<h3 id="tabela-1-elementos-do-diagrama-de-casos-de-uso">Tabela 1: Elementos do Diagrama de Casos de Uso</h3>
+<p style="text-align: center"><b>Tabela 2</b> - Tabela de Elementos do Diagrama de Casos de Uso </p>
+
+<table>
+<thead>
+<tr>
+<th>Nome do Elemento</th>
+<th>Imagem</th>
+<th>Função</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ator</strong></td>
+<td><img alt="Boneco Palito" src="../../assets/ChatGPT%20Image%205_06_2025%2C%2008_51_23.png" /></td>
+<td>Representa os diferentes tipos de usuários externos que interagem com o sistema.</td>
+</tr>
+<tr>
+<td><strong>Elipse (Caso de Uso)</strong></td>
+<td><img alt="Elipse" src="https://cdn-icons-png.flaticon.com/512/1014/1014918.png" /></td>
+<td>Representa uma funcionalidade ou uma ação específica que o sistema pode realizar. A elipse contém o nome do caso de uso.</td>
+</tr>
+<tr>
+<td><strong>Retângulo (Sistema)</strong></td>
+<td><img alt="Retângulo" src="https://images.vexels.com/media/users/3/139257/isolated/svg/b8fa8f291632f8fe68842e4fb100d8e0.svg" /></td>
+<td>Representa o sistema ou o bloco em análise. Ele envolve os casos de uso e atores relacionados.</td>
+</tr>
+<tr>
+<td><strong>Flecha (Relações)</strong></td>
+<td><img alt="Flecha" src="../../assets/Captura%20de%20tela%202025-06-08%20173528.png" /></td>
+<td>Representa as relações ou interações entre atores e casos de uso.</td>
+</tr>
+</tbody>
+</table>
+<p><font size="3"><p style="text-align: center">Fonte: <a href="https://github.com/JuliaReis18">Julia Massuda</a>, 2025.</p></font></p>
+<h2 id="atores">Atores</h2>
+<h3 id="ator-primario-contribuinte">Ator Primário: Contribuinte</h3>
+<p>Usuário principal do aplicativo. Suas ações incluem:</p>
+<ul>
+<li>Consultar situação fiscal</li>
+<li>Enviar declaração de IRPF</li>
+<li>Consultar e acompanhar restituições</li>
+<li>Emitir e pagar guias de pagamento (DARF)</li>
+<li>Atualizar dados cadastrais</li>
+<li>Receber notificações da Receita</li>
+<li>Emitir certidões</li>
+<li>Acessar vídeos e notícias institucionais</li>
+</ul>
+<h3 id="ator-secundario-auditor-da-receita">Ator Secundário: Auditor da Receita</h3>
+<p>Usuário institucional, com acesso ao sistema para:</p>
+<ul>
+<li>Atualizar base de dados</li>
+<li>Validar informações declaradas</li>
+<li>Enviar notificações automatizadas</li>
+<li>Integrar sistemas internos da RFB ao app</li>
+</ul>
+<h2 id="descricao-geral-dos-diagramas-realizados">Descrição Geral dos Diagramas Realizados</h2>
+<ul>
+<li>O contribuinte interage com o sistema para realizar todos os casos de uso.</li>
+<li>O servidor da Receita Federal valida e processa os dados.</li>
+</ul>
+<h3 id="diagrama-de-casos-de-uso-requisitos-implementados">Diagrama de Casos de Uso: Requisitos Implementados</h3>
+<p><img alt="Diagrama de Casos de Uso" src="../../assets/Diagrama%20de%20Casos%20de%20Uso.jpg" /><br />
+Fonte: <a href="https://github.com/JuliaReis18">Julia Massuda</a></p>
+<h2 id="caso-de-uso-01-uc01">CASO DE USO 01 - (UC01)</h2>
+<p style="text-align: center"><b>Tabela 3</b> - CASO DE USO 01 - (UC01) </p>
+
+<table>
+<thead>
+<tr>
+<th><strong>COLUNA</strong></th>
+<th><strong>DESCRIÇÃO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nome do caso de uso:</strong></td>
+<td>Consultar Status da Restituição do IRPF</td>
+</tr>
+<tr>
+<td><strong>Rastreabilidade:</strong></td>
+<td><a href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/elicitacao/analisededocumentos/">ADC3</a> e <a href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/elicitacao/storytelling/">ST02</a></td>
+</tr>
+<tr>
+<td><strong>Pré-condição:</strong></td>
+<td>- App instalado em dispositivo compatível  <br> - Autenticação via CPF e senha Gov.br <br> - Sistema da Receita operacional e sincronizado</td>
+</tr>
+<tr>
+<td><strong>Ator principal:</strong></td>
+<td>Contribuinte</td>
+</tr>
+<tr>
+<td><strong>Atores secundários:</strong></td>
+<td>Auditor da Receita</td>
+</tr>
+<tr>
+<td><strong>Objetivo:</strong></td>
+<td>Permitir que o contribuinte consulte o status da restituição com informações sobre lote, valor e data prevista</td>
+</tr>
+<tr>
+<td><strong>Fluxo principal:</strong></td>
+<td>1. Acessa o app da Receita <br> 2. Seleciona “Consultar restituição do IR” <br> 3. Sistema valida conexão com internet (PI1) <br> 4. Valida CPF/autenticação (PI2) <br> 5. Consulta banco de dados <br> 6. Exibe status com: lote, situação, valor, data <br> 7. Permite visualizar/baixar comprovante (PE1) <br> 8. Registra no histórico</td>
+</tr>
+<tr>
+<td><strong>Fluxo alternativo:</strong></td>
+<td>6a. Se há múltiplas restituições, exibe lista por ano <br> 6b. Usuário seleciona o ano desejado</td>
+</tr>
+<tr>
+<td><strong>Fluxo de exceção:</strong></td>
+<td>- E1: Sem internet → mostra erro e sugere reconectar (PI1) <br> - E2: CPF inválido → volta para login (PI2) <br> - E3: Nenhum dado encontrado → informa ausência de restituições <br> - E4: Sistema instável → mostra mensagem de indisponibilidade</td>
+</tr>
+<tr>
+<td><strong>Pós-condição:</strong></td>
+<td>- Status da restituição exibido <br> - Informações podem ser salvas ou compartilhadas <br> - Histórico atualizado <br> - Pode haver redirecionamento para vídeos explicativos (PE2)</td>
+</tr>
+</tbody>
+</table>
+<p><font size="3"><p style="text-align: center">Fonte: <a href="https://github.com/jevprado">Jose Eduardo   </a>, 2025.</p></font></p>
+<h2 id="caso-de-uso-02-uc02">CASO DE USO 02 - (UC02)</h2>
+<p style="text-align: center"><b>Tabela 4</b> - Tabela CASO DE USO 02 - (UC02) </p>
+
+<table>
+<thead>
+<tr>
+<th><strong>COLUNA</strong></th>
+<th><strong>DESCRIÇÃO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nome do caso de uso:</strong></td>
+<td>Agendar Atendimento Presencial</td>
+</tr>
+<tr>
+<td><strong>Rastreabilidade:</strong></td>
+<td><a href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/elicitacao/introspeccao/">INT3</a></td>
+</tr>
+<tr>
+<td><strong>Pré-condição:</strong></td>
+<td>- Aplicativo instalado em dispositivo compatível <br> - Contribuinte autenticado via CPF e senha Gov.br <br> - Sistema da Receita sincronizado com agenda das unidades</td>
+</tr>
+<tr>
+<td><strong>Ator principal:</strong></td>
+<td>Contribuinte</td>
+</tr>
+<tr>
+<td><strong>Atores secundários:</strong></td>
+<td>Servidor da Receita (responsável por configurar e disponibilizar horários e unidades de atendimento)</td>
+</tr>
+<tr>
+<td><strong>Objetivo:</strong></td>
+<td>Permitir ao contribuinte agendar atendimentos presenciais diretamente pelo aplicativo, escolhendo unidade, data e horário</td>
+</tr>
+<tr>
+<td><strong>Fluxo principal:</strong></td>
+<td>1. Contribuinte acessa o app da Receita <br> 2. Seleciona a opção "Agendar Atendimento" <br> 3. Sistema valida conexão com a internet (PI1) <br> 4. Valida autenticação do usuário (PI2) <br> 5. Sistema exibe unidades disponíveis e horários <br> 6. Contribuinte seleciona unidade, serviço, data e horário <br> 7. Confirma agendamento <br> 8. Sistema registra o agendamento e envia notificação de confirmação</td>
+</tr>
+<tr>
+<td><strong>Fluxo alternativo:</strong></td>
+<td>5a. Se o serviço desejado não estiver disponível na unidade escolhida, sistema exibe unidades alternativas <br> 6a. Contribuinte pode alterar data/horário sugerido pelo sistema</td>
+</tr>
+<tr>
+<td><strong>Fluxo de exceção:</strong></td>
+<td>- E1: Falha de conexão → exibe mensagem e orienta reconexão (PI1) <br> - E2: Falha na autenticação → redireciona para login (PI2) <br> - E3: Nenhum horário disponível → sistema exibe mensagem e sugere outras datas ou unidades <br> - E4: Instabilidade no sistema → informa indisponibilidade e recomenda tentar mais tarde</td>
+</tr>
+<tr>
+<td><strong>Pós-condição:</strong></td>
+<td>- Agendamento registrado com sucesso <br> - Contribuinte recebe notificação e pode consultar, cancelar ou remarcar atendimento <br> - Histórico de agendamentos atualizado</td>
+</tr>
+</tbody>
+</table>
+<p><font size="3"><p style="text-align: center">Fonte: <a href="https://github.com/jevprado">Jose Eduardo   </a>, 2025.</p></font></p>
+<h2 id="caso-de-uso-07-uc07">CASO DE USO 07 - (UC07)</h2>
+<p style="text-align: center"><b>Tabela 7</b> - CASO DE USO 07 - (UC07)</p>
+
+<table>
+<thead>
+<tr>
+<th>COLUNA</th>
+<th>DESCRIÇÃO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nome do caso de uso:</td>
+<td>Consultar Status do CPF</td>
+</tr>
+<tr>
+<td>Rastreabilidade:</td>
+<td><a href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/elicitacao/storytelling/">ST06</a> e <a href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/elicitacao/analisededocumentos/">ADC11</a></td>
+</tr>
+<tr>
+<td>Pré-condição:</td>
+<td>- App instalado em dispositivo compatível  <br> - Autenticação via CPF e senha Gov.br <br> - Sistema da Receita sincronizado com base de dados do CPF</td>
+</tr>
+<tr>
+<td>Ator principal:</td>
+<td>Contribuinte</td>
+</tr>
+<tr>
+<td>Atores secundários:</td>
+<td>Servidor da Receita</td>
+</tr>
+<tr>
+<td>Objetivo:</td>
+<td>Permitir ao contribuinte verificar o status de seu CPF (ativo, pendente ou suspenso)</td>
+</tr>
+<tr>
+<td>Fluxo principal:</td>
+<td>1. Usuário acessa o app <br> 2. Seleciona “Consultar status do CPF” <br> 3. Sistema valida internet (PI1) <br> 4. Valida autenticação (PI2) <br> 5. Sistema consulta base de dados <br> 6. Exibe status do CPF (ativo, suspenso, cancelado) <br> 7. Exibe possíveis instruções para regularização, se aplicável</td>
+</tr>
+<tr>
+<td>Fluxo alternativo:</td>
+<td>6a. Se CPF estiver pendente, permite acesso a vídeos e informações sobre regularização (PE2)</td>
+</tr>
+<tr>
+<td>Fluxo de exceção:</td>
+<td>- E1: Sem internet → sugere reconectar (PI1) <br> - E2: Erro na autenticação → volta ao login (PI2) <br> - E3: Dados não encontrados → exibe mensagem e instruções para contato</td>
+</tr>
+<tr>
+<td>Pós-condição:</td>
+<td>- Status do CPF exibido <br> - Histórico de consulta atualizado <br> - Pode haver redirecionamento para regularização online</td>
+</tr>
+</tbody>
+</table>
+<p><font size="3"><p style="text-align: center">Fonte: <a href="https://github.com/JpRodrigues2">João Pedro</a>, 2025.</p></font></p>
+<hr />
+<h2 id="caso-de-uso-08-uc08">CASO DE USO 08 - (UC08)</h2>
+<p style="text-align: center"><b>Tabela 8</b> - CASO DE USO 08 - (UC08)</p>
+
+<table>
+<thead>
+<tr>
+<th>COLUNA</th>
+<th>DESCRIÇÃO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nome do caso de uso:</td>
+<td>Emitir Comprovante de CPF</td>
+</tr>
+<tr>
+<td>Rastreabilidade:</td>
+<td><a href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/elicitacao/storytelling/">ST07</a> e <a href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/elicitacao/analisededocumentos/">ADC2</a></td>
+</tr>
+<tr>
+<td>Pré-condição:</td>
+<td>- App instalado em dispositivo compatível  <br> - Autenticação via CPF e senha Gov.br <br> - Status do CPF consultado previamente</td>
+</tr>
+<tr>
+<td>Ator principal:</td>
+<td>Contribuinte</td>
+</tr>
+<tr>
+<td>Atores secundários:</td>
+<td>Servidor da Receita</td>
+</tr>
+<tr>
+<td>Objetivo:</td>
+<td>Permitir ao usuário emitir, baixar e compartilhar o comprovante oficial de inscrição no CPF</td>
+</tr>
+<tr>
+<td>Fluxo principal:</td>
+<td>1. Acessa o app da Receita <br> 2. Seleciona “Emitir Comprovante de CPF” <br> 3. Sistema valida internet (PI1) <br> 4. Valida autenticação (PI2) <br> 5. Consulta base de dados <br> 6. Gera comprovante em PDF <br> 7. Exibe opção para salvar ou compartilhar (PE1)</td>
+</tr>
+<tr>
+<td>Fluxo alternativo:</td>
+<td>6a. Permite escolher entre comprovante resumido ou completo</td>
+</tr>
+<tr>
+<td>Fluxo de exceção:</td>
+<td>- E1: Falha de conexão → mostra erro (PI1) <br> - E2: CPF não encontrado ou inválido → exibe aviso <br> - E3: Erro ao gerar PDF → orienta tentativa posterior</td>
+</tr>
+<tr>
+<td>Pós-condição:</td>
+<td>- Comprovante gerado com sucesso <br> - Pode ser salvo ou enviado <br> - Histórico atualizado com registro da emissão</td>
+</tr>
+</tbody>
+</table>
+<p><font size="3"><p style="text-align: center">Fonte: <a href="https://github.com/JpRodrigues2">João Pedro</a>, 2025.</p></font></p>
+<h2 id="caso-de-uso-09-uc09">CASO DE USO 09 - (UC09)</h2>
+<p style="text-align: center"><b>Tabela 5</b> - CASO DE USO 09 - (UC09) </p>
+
+<table>
+<thead>
+<tr>
+<th><strong>COLUNA</strong></th>
+<th><strong>DESCRIÇÃO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nome do caso de uso:</strong></td>
+<td>Consultar Situação Fiscal</td>
+</tr>
+<tr>
+<td><strong>Rastreabilidade:</strong></td>
+<td><a href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/elicitacao/storytelling/">ST04</a> e <a href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/elicitacao/analisededocumentos/">ADC5</a></td>
+</tr>
+<tr>
+<td><strong>Pré-condição:</strong></td>
+<td>- App instalado em dispositivo compatível  <br> - Autenticação via CPF e senha Gov.br <br> - Sistema da Receita operacional e sincronizado</td>
+</tr>
+<tr>
+<td><strong>Ator principal:</strong></td>
+<td>Contribuinte</td>
+</tr>
+<tr>
+<td><strong>Atores secundários:</strong></td>
+<td>Auditor da Receita</td>
+</tr>
+<tr>
+<td><strong>Objetivo:</strong></td>
+<td>Permitir ao contribuinte consultar sua situação fiscal, visualizando pendências, débitos e extratos detalhados</td>
+</tr>
+<tr>
+<td><strong>Fluxo principal:</strong></td>
+<td>1. Acessa o app da Receita <br> 2. Seleciona “Consultar Situação Fiscal” <br> 3. Sistema valida conexão com internet (PI1) <br> 4. Valida autenticação (PI2) <br> 5. Consulta banco de dados <br> 6. Exibe pendências, débitos e extratos detalhados <br> 7. Permite download do relatório <br> 8. Registra consulta no histórico (PE3)</td>
+</tr>
+<tr>
+<td><strong>Fluxo alternativo:</strong></td>
+<td>6a. Se há múltiplas pendências, exibe lista com filtros por tipo e ano <br> 7a. Permite compartilhar relatório via e-mail/WhatsApp (PE1)</td>
+</tr>
+<tr>
+<td><strong>Fluxo de exceção:</strong></td>
+<td>- E1: Sem internet → mostra erro e sugere reconectar (PI1) <br> - E2: Falha na autenticação → volta para login (PI2) <br> - E3: Nenhum dado encontrado → exibe mensagem “Situação fiscal regular” <br> - E4: Sistema instável → mostra mensagem de indisponibilidade</td>
+</tr>
+<tr>
+<td><strong>Pós-condição:</strong></td>
+<td>- Situação fiscal exibida <br> - Relatório salvo ou compartilhado (se solicitado) <br> - Histórico atualizado</td>
+</tr>
+</tbody>
+</table>
+<p><font size="3"><p style="text-align: center">Fonte:  <a href="https://github.com/JuliaReis18">Julia Massuda</a>, 2025.</p></font></p>
+<hr />
+<h2 id="caso-de-uso-10-uc10">CASO DE USO 10 - (UC10)</h2>
+<p style="text-align: center"><b>Tabela 6</b> - CASO DE USO 10 - (UC10) </p>
+
+<table>
+<thead>
+<tr>
+<th><strong>COLUNA</strong></th>
+<th><strong>DESCRIÇÃO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nome do caso de uso:</strong></td>
+<td>Atualizar Dados Cadastrais</td>
+</tr>
+<tr>
+<td><strong>Rastreabilidade:</strong></td>
+<td><a href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/elicitacao/analisededocumentos/">ADC7</a></td>
+</tr>
+<tr>
+<td><strong>Pré-condição:</strong></td>
+<td>- App instalado em dispositivo compatível  <br> - Autenticação via CPF e senha Gov.br <br> - Sistema da Receita operacional e sincronizado</td>
+</tr>
+<tr>
+<td><strong>Ator principal:</strong></td>
+<td>Contribuinte</td>
+</tr>
+<tr>
+<td><strong>Atores secundários:</strong></td>
+<td>Servidor da Receita</td>
+</tr>
+<tr>
+<td><strong>Objetivo:</strong></td>
+<td>Permitir ao contribuinte atualizar dados como endereço, contatos e dados bancários com validação de segurança</td>
+</tr>
+<tr>
+<td><strong>Fluxo principal:</strong></td>
+<td>1. Acessa o app da Receita <br> 2. Seleciona “Atualizar Dados Cadastrais” <br> 3. Sistema valida conexão com internet (PI1) <br> 4. Valida autenticação (PI2) <br> 5. Exibe dados atuais <br> 6. Contribuinte edita campos desejados <br> 7. Sistema valida alterações <br> 8. Contribuinte confirma atualização <br> 9. Sistema registra atualização e envia confirmação por e-mail/SMS</td>
+</tr>
+<tr>
+<td><strong>Fluxo alternativo:</strong></td>
+<td>6a. Contribuinte corrige campo com erro após aviso do sistema <br> 9a. Permite salvar comprovante da atualização</td>
+</tr>
+<tr>
+<td><strong>Fluxo de exceção:</strong></td>
+<td>- E1: Sem internet → mostra erro e sugere reconectar (PI1) <br> - E2: Falha na autenticação → volta para login (PI2) <br> - E3: Dados inválidos → exibe erro e orienta correção <br> - E4: Sistema instável → mostra mensagem de indisponibilidade</td>
+</tr>
+<tr>
+<td><strong>Pós-condição:</strong></td>
+<td>- Dados atualizados e salvos <br> - Confirmação enviada ao contribuinte <br> - Histórico de alterações atualizado</td>
+</tr>
+</tbody>
+</table>
+<p><font size="3"><p style="text-align: center">Fonte:  <a href="https://github.com/JuliaReis18">Julia Massuda</a>, 2025.</p></font></p>
+<h2 id="caso-de-uso-11-uc11">CASO DE USO 11 - (UC11)</h2>
+<p style="text-align: center"><b>Tabela 9</b> - CASO DE USO 11 - (UC11) </p>
+
+<table>
+<thead>
+<tr>
+<th><strong>COLUNA</strong></th>
+<th><strong>DESCRIÇÃO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nome do caso de uso:</strong></td>
+<td>Visualizar Histórico de Declarações e Restituições Anteriores</td>
+</tr>
+<tr>
+<td><strong>Rastreabilidade:</strong></td>
+<td><a href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/elicitacao/storytelling/#storytelling-por-persona">ST09</a>, <a href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/elicitacao/analisededocumentos/">ADC8</a></td>
+</tr>
+<tr>
+<td><strong>Pré-condição:</strong></td>
+<td>- App instalado <br> - Login autenticado com conta Gov.br <br> - Declarações anteriores enviadas</td>
+</tr>
+<tr>
+<td><strong>Ator principal:</strong></td>
+<td>Contribuinte</td>
+</tr>
+<tr>
+<td><strong>Atores secundários:</strong></td>
+<td>Servidor da Receita</td>
+</tr>
+<tr>
+<td><strong>Objetivo:</strong></td>
+<td>Permitir que o contribuinte acesse e visualize o histórico de envio de declarações e respectivas restituições dos anos anteriores</td>
+</tr>
+<tr>
+<td><strong>Fluxo principal:</strong></td>
+<td>1. Nuno acessa o app <br> 2. Vai até a seção “Histórico de Declarações” <br> 3. Sistema valida login e busca os registros <br> 4. Exibe uma lista com os anos e status <br> 5. Nuno seleciona um ano <br> 6. Visualiza dados enviados e situação da restituição <br> 7. Pode baixar recibos ou relatórios</td>
+</tr>
+<tr>
+<td><strong>Fluxo alternativo:</strong></td>
+<td>4a. Permite filtrar por status da restituição (aguardando, paga, em análise) ou tipo de declaração</td>
+</tr>
+<tr>
+<td><strong>Fluxo de exceção:</strong></td>
+<td>- E1: Nenhuma declaração encontrada → exibe aviso e sugere preenchimento <br> - E2: Falha na autenticação → retorna ao login <br> - E3: Erro na consulta ao banco de dados → mostra mensagem de instabilidade</td>
+</tr>
+<tr>
+<td><strong>Pós-condição:</strong></td>
+<td>- Histórico visualizado com sucesso <br> - Relatórios podem ser baixados ou compartilhados</td>
+</tr>
+</tbody>
+</table>
+<p><font size="3"><p style="text-align: center">Fonte:  <a href="https://github.com/Diaxiz">Diassis</a>, 2025.</p></font></p>
+<h2 id="caso-de-uso-12-uc12">CASO DE USO 12 - (UC12)</h2>
+<p style="text-align: center"><b>Tabela 10</b> - CASO DE USO 12 - (UC12) </p>
+
+<table>
+<thead>
+<tr>
+<th><strong>COLUNA</strong></th>
+<th><strong>DESCRIÇÃO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nome do caso de uso:</strong></td>
+<td>Acesso simultâneo a múltiplos CPFs/CNPJs</td>
+</tr>
+<tr>
+<td><strong>Rastreabilidade:</strong></td>
+<td><a href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/elicitacao/storytelling/#storytelling-por-persona">ST01</a>, <a href="https://requisitos-de-software.github.io/2025.1-ReceitaFederal/elicitacao/analisededocumentos/">ADC1</a></td>
+</tr>
+<tr>
+<td><strong>Pré-condição:</strong></td>
+<td>- App instalado <br> - Autenticação via Gov.br com permissão de contador(a) <br> - Clientes vinculados previamente</td>
+</tr>
+<tr>
+<td><strong>Ator principal:</strong></td>
+<td>Contribuinte (Contadora)</td>
+</tr>
+<tr>
+<td><strong>Atores secundários:</strong></td>
+<td>Clientes da contadora</td>
+</tr>
+<tr>
+<td><strong>Objetivo:</strong></td>
+<td>Permitir que profissionais da contabilidade acessem diversos CPFs/CNPJs sob sua responsabilidade com facilidade</td>
+</tr>
+<tr>
+<td><strong>Fluxo principal:</strong></td>
+<td>1. Fernanda acessa o app <br> 2. Navega até “Área do Contador” <br> 3. Visualiza lista de clientes vinculados <br> 4. Seleciona um CPF/CNPJ <br> 5. Acessa declarações, pendências e status <br> 6. Alterna entre clientes sem precisar sair do app</td>
+</tr>
+<tr>
+<td><strong>Fluxo alternativo:</strong></td>
+<td>3a. Se cliente ainda não estiver vinculado, app exibe botão para solicitar permissão e envio de token de autorização</td>
+</tr>
+<tr>
+<td><strong>Fluxo de exceção:</strong></td>
+<td>- E1: Acesso não autorizado → app orienta envio de convite ao cliente <br> - E2: Erro ao buscar dados → exibe mensagem de instabilidade <br> - E3: Nenhum cliente vinculado → mostra instruções para adicionar</td>
+</tr>
+<tr>
+<td><strong>Pós-condição:</strong></td>
+<td>- Acesso completo aos dados de cada cliente <br> - Histórico de acessos por CPF atualizado</td>
+</tr>
+</tbody>
+</table>
+<p><font size="3"><p style="text-align: center">Fonte:  <a href="https://github.com/Diaxiz">Diassis</a>, 2025.</p></font></p>
+<h2 id="pre-condicoes">Pré-condições</h2>
+<p>Situações que devem ser atendidas antes que um caso de uso possa ser executado:
+- O aplicativo da Receita deve estar instalado em um dispositivo compatível.
+- O contribuinte deve possuir acesso à internet e autenticação por CPF e senha Gov.br.
+- O sistema da Receita deve estar operacional para sincronização com o banco de dados.</p>
+<h2 id="pos-condicoes">Pós-condições</h2>
+<p>Situações que descrevem o que se altera ou permanece após a execução dos casos de uso:
+- Consulta ou serviço solicitado é realizado com sucesso.
+- O status do CPF é atualizado ou exibido.
+- Declarações e comprovantes são enviados ou baixados.
+- O usuário recebe notificação da conclusão do processo.</p>
+<h2 id="relacionamentos">Relacionamentos</h2>
+<p>Identificam as interações entre os atores e os casos de uso, podendo ser:
+- <strong>Associação</strong>: Entre o contribuinte e os casos de uso (ex: "Emitir DARF").
+- <strong>Inclusão (<code>&lt;&lt;include&gt;&gt;</code>)</strong>: Validação de conexão com a internet incluída em vários casos.
+- <strong>Extensão (<code>&lt;&lt;extend&gt;&gt;</code>)</strong>: Compartilhamento de comprovantes ou acesso a vídeos explicativos.</p>
+<h3 id="pontos-de-extensao">Pontos de Extensão</h3>
+<ul>
+<li><strong>PE1</strong>: Compartilhar comprovante de declaração via e-mail/WhatsApp</li>
+<li><strong>PE2</strong>: Acessar vídeos sobre como interpretar pendências</li>
+<li><strong>PE3</strong>: Acompanhar histórico de declarações anteriores</li>
+</ul>
+<h3 id="pontos-de-inclusao">Pontos de Inclusão</h3>
+<ul>
+<li><strong>PI1</strong>: Validar conexão com internet</li>
+<li><strong>PI2</strong>: Validar CPF com o sistema da Receita</li>
+<li><strong>PI3</strong>: Exibir status da declaração após envio</li>
+</ul>
+<h2 id="compreensao-do-diagrama">Compreensão do Diagrama</h2>
+<h3 id="sistema">Sistema</h3>
+<ul>
+<li>O sistema é representado por um retângulo?</li>
+<li>O sistema tem título no topo?</li>
+<li>Todas as funcionalidades estão dentro do retângulo?</li>
+<li>Tudo fora do retângulo ocorre fora do app?</li>
+</ul>
+<h3 id="atores_1">Atores</h3>
+<ul>
+<li>O ator contribuinte interage com o app?</li>
+<li>O ator servidor interage com o app?</li>
+<li>O ator primário está à esquerda?</li>
+<li>O ator secundário está à direita?</li>
+</ul>
+<h3 id="casos-de-uso">Casos de Uso</h3>
+<h4 id="autenticacao">Autenticação</h4>
+<h5 id="realizar-login">Realizar Login</h5>
+<ul>
+<li>Login com CPF</li>
+<li>Login com certificado digital</li>
+<li>Login com conta Gov.br</li>
+<li>Segurança adequada aos serviços</li>
+<li>Bloqueio após tentativas inválidas</li>
+<li>Armazenamento seguro de credenciais</li>
+</ul>
+<h5 id="recuperar-senha">Recuperar Senha</h5>
+<ul>
+<li>Recuperação por e-mail</li>
+<li>Recuperação por SMS</li>
+<li>Validação de dados pessoais</li>
+<li>Link de recuperação com expiração</li>
+</ul>
+<h5 id="validar-acesso-via-govbr">Validar Acesso via Gov.br</h5>
+<ul>
+<li>Integração com Gov.br</li>
+<li>Reconhecimento de níveis de autenticação</li>
+<li>Redirecionamento pós-login</li>
+<li>Transmissão segura de dados</li>
+</ul>
+<h4 id="consultas-gerais">Consultas Gerais</h4>
+<h5 id="consultar-situacao-fiscal">Consultar Situação Fiscal</h5>
+<ul>
+<li>Exibição de pendências</li>
+<li>Visualização de extrato</li>
+<li>Detalhamento de débitos</li>
+<li>Status em tempo real</li>
+<li>Download de relatório</li>
+</ul>
+<h5 id="atualizar-dados-cadastrais">Atualizar Dados Cadastrais</h5>
+<ul>
+<li>Alterar endereço</li>
+<li>Alterar contatos (e-mail/telefone)</li>
+<li>Alterar dados bancários</li>
+<li>Confirmação por e-mail/SMS</li>
+<li>Proteção contra alterações indevidas</li>
+</ul>
+<h5 id="consultar-processos">Consultar Processos</h5>
+<ul>
+<li>Lista de processos</li>
+<li>Detalhes do processo</li>
+<li>Notificações de atualizações</li>
+<li>Histórico de movimentações</li>
+<li>Download de documentos</li>
+</ul>
+<h4 id="agendar-atendimento">Agendar Atendimento</h4>
+<ul>
+<li>Disponibilidade de datas/horários</li>
+<li>Escolha de unidades</li>
+<li>Confirmação de agendamento</li>
+<li>Cancelamento e remarcação</li>
+<li>Lembretes automáticos</li>
+</ul>
+<h4 id="pagar-tributos">Pagar Tributos</h4>
+<ul>
+<li>Lista de tributos pendentes </li>
+<li>Integração com bancos </li>
+<li>Histórico de pagamentos </li>
+<li>Parcelamento de débitos </li>
+<li>Emissão de comprovante </li>
+</ul>
+<h4 id="declaracao-de-imposto-de-renda">Declaração de Imposto de Renda</h4>
+<h5 id="preencher-declaracao">Preencher Declaração</h5>
+<ul>
+<li>Importar dados do ano anterior </li>
+<li>Dados pré-preenchidos </li>
+<li>Importar fontes pagadoras </li>
+<li>Bens e direitos </li>
+<li>Dependentes </li>
+<li>Cálculo de deduções </li>
+<li>Verificação de inconsistências </li>
+</ul>
+<h5 id="9352-enviar-declaracao">9.3.5.2 Enviar Declaração</h5>
+<ul>
+<li>Transmissão segura </li>
+<li>Recebimento de protocolo </li>
+<li>Confirmação pela Receita </li>
+<li>Status de processamento </li>
+<li>Desempenho de envio </li>
+</ul>
+<h5 id="consultar-recibo">Consultar Recibo</h5>
+<ul>
+<li>Visualizar recibo </li>
+<li>Baixar em PDF </li>
+<li>Compartilhar recibo </li>
+<li>Histórico de recibos </li>
+</ul>
+<h4 id="restituicao-de-ir">Restituição de IR</h4>
+<h5 id="consultar-lotes">Consultar Lotes</h5>
+<ul>
+<li>Cronograma de lotes </li>
+<li>Consulta por CPF </li>
+<li>Valor e data do pagamento </li>
+<li>Status de análise </li>
+<li>Notificações de liberação </li>
+</ul>
+<h5 id="atualizar-dados-bancarios">Atualizar Dados Bancários</h5>
+<ul>
+<li>Alterar conta para crédito </li>
+<li>Validação de dados bancários </li>
+<li>Confirmação da alteração </li>
+<li>Histórico de alterações </li>
+</ul>
+<h5 id="emitir-comprovante">Emitir Comprovante</h5>
+<ul>
+<li>Geração de comprovante </li>
+<li>Baixar PDF </li>
+<li>Validação fiscal </li>
+<li>Compartilhamento </li>
+<li>Histórico de comprovantes </li>
+</ul>
+<h4 id="seguranca">Segurança</h4>
+<ul>
+<li>Proteção de dados locais </li>
+<li>Autenticação biométrica </li>
+<li>Conformidade com LGPD </li>
+</ul>
+<h4 id="usabilidade">Usabilidade</h4>
+<ul>
+<li>Acessibilidade </li>
+<li>Compatibilidade com telas </li>
+<li>Clareza das instruções </li>
+<li>Navegação intuitiva </li>
+<li>Ajuda contextual </li>
+<li>Busca no app </li>
+</ul>
+<h3 id="relacionamento">RELACIONAMENTO</h3>
+<ul>
+<li>Atores interagem com os casos de uso? </li>
+<li>Existe associação entre atores e funcionalidades? </li>
+<li>Existe inclusão (&lt;<include>&gt;)? </li>
+<li>Existe extensão (&lt;<extend>&gt;)? </li>
+<li>Existe generalização? (não aplicável neste caso) </li>
+</ul>
+<h2 id="videos-de-validacao">Vídeos de validação</h2>
+<h3 id="validacao-do-caso-de-uso-01-uc01-e-caso-de-uso-02-uc02">Validação do Caso de Uso 01 - (UC01) e Caso de Uso 02 - (UC02)</h3>
+<p style="text-align: center"><b>Vídeo 1</b> - Validação do Caso de Uso 01 - (UC01) e Caso de Uso 02 - (UC02)</p>
+
+<iframe width="700" height="400"
+        src="https://www.youtube.com/embed/xZkePEceRRQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+</iframe>
+
+<p><font size="3"><p style="text-align: center">Fonte: <a href="https://github.com/jevprado">Jose Eduardo</a>, 2025.</p></font></p>
+<h2 id="referencias">Referências</h2>
+<ul>
+<li>DEVMEDIA. O que é UML e diagramas de caso de uso – Introdução prática à UML. Disponível em: https://www.devmedia.com.br/o-que-e-uml-e-diagramas-de-caso-de-uso-introducao-pratica-a-uml/23408. Acesso em: 08 jun. 2025. </li>
+<li>Receita Federal do Brasil. Aplicativo Pessoa Física. Disponível em: https://www.gov.br/receitafederal. Acesso em: 08 jun. 2025 </li>
+<li>SOMMERVILLE, Ian. Engenharia de Software. 10. ed. São Paulo: Pearson, 2011. </li>
+<li>PINTO, Gabriel. Modelagem de Casos de Uso. Brasília, 2025.</li>
+</ul>
+<h2 id="historico-de-versoes">Histórico de versões</h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição</th>
+<th>Autor(es)</th>
+<th>Revisor(es)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1.0</code></td>
+<td>11/05/2025</td>
+<td>Criação do documento Casos de uso</td>
+<td><a href="https://github.com/JuliaReis18">Julia Massuda</a> e  <a href="https://github.com/andrewslopes">Andre Lopes</a></td>
+<td><a href="https://github.com/jevprado">Jose Eduardo</a></td>
+</tr>
+<tr>
+<td><code>2.0</code></td>
+<td>08/06/2025</td>
+<td>Alterações no conteúdo + adicionando novo diagrama e tabela de casos de uso</td>
+<td><a href="https://github.com/JuliaReis18">Julia Massuda</a> e  <a href="https://github.com/andrewslopes">Andre Lopes</a></td>
+<td><a href="https://github.com/jevprado">Jose Eduardo</a></td>
+</tr>
+<tr>
+<td><code>2.1</code></td>
+<td>12/06/2025</td>
+<td>Adição da tabela de atividade dos membros</td>
+<td><a href="https://github.com/jevprado">Jose Eduardo</a></td>
+<td><a href="https://github.com/Diaxiz">Diassis</a></td>
+</tr>
+<tr>
+<td><code>2.2</code></td>
+<td>21/06/2025</td>
+<td>Adição dos UC01 E UC02</td>
+<td><a href="https://github.com/jevprado">Jose Eduardo</a></td>
+<td><a href="https://github.com/JuliaReis18">Julia Massuda</a></td>
+</tr>
+<tr>
+<td><code>2.3</code></td>
+<td>22/06/2025</td>
+<td>Adição dos UC09 E UC10</td>
+<td><a href="https://github.com/JuliaReis18">Julia Massuda</a></td>
+<td><a href="https://github.com/jevprado">Jose Eduardo</a></td>
+</tr>
+<tr>
+<td><code>2.4</code></td>
+<td>22/06/2025</td>
+<td>Adição dos UC07 E UC08</td>
+<td><a href="https://github.com/JpRodrigues2">João Pedro</a></td>
+<td><a href="https://github.com/JuliaReis18">Julia Massuda</a></td>
+</tr>
+<tr>
+<td><code>2.5</code></td>
+<td>30/06/2025</td>
+<td>Adicionando a validação do UC01 e UC02</td>
+<td><a href="https://github.com/jevprado">Jose Eduardo</a></td>
+<td><a href="https://github.com/Diaxiz">Diassis</a></td>
+</tr>
+<tr>
+<td><code>2.6</code></td>
+<td>30/06/2025</td>
+<td>Criação de UC11 E UC12</td>
+<td><a href="https://github.com/Diaxiz">Diassis</a></td>
+<td><a href="https://github.com/jevprado">Jose Eduardo</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>

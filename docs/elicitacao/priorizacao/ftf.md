@@ -1,12 +1,22 @@
-# First Things First
-
-## 1. Introdução
+## Introdução
 
 O First Things First (FTF) é uma técnica de priorização de requisitos que visa equilibrar, definir, alinhar e estabelecer as tarefas que devem ser feitas, dividindo-as entre mais e menos importantes. A abordagem busca avaliar o valor agregado de cada requisito, sua penalidade em caso de ausência, bem como os custos e riscos de implementação, considerando a complexidade técnica e as incertezas do projeto.
 
 ---
 
-## 2. Metodologia
+## Tabela de atividades por membro
+
+<p style="text-align: center"><b>Tabela 1</b> Tabela de atividades dos membros </p>
+
+|Nome                                               | Atividade entregue                        | 
+| ------------------------------------------------- | ----------------------------------------- | 
+| [Jose Eduardo](https://github.com/jevprado)       | Criação da tabela 02 e 03 <br> Participação no vídeo com usuário                       | 
+| [Diassis](https://github.com/Diaxiz)              | Criação do documento `1.0` e `2.0` <br> Criação da tabela 02 e 03 <br> Participação no vídeo com usuário.              | 
+| [Thales Germano](https://github.com/thalesgvl)    |  Revisor `1.0` e `2.0`.                  |
+
+<font size="3"><p style="text-align: center">Fonte: [Jose Eduardo](https://github.com/jevprado), 2025.</p></font>
+
+## Metodologia
 
 A priorização seguiu uma sequência estruturada de etapas para garantir uma análise objetiva e equilibrada dos requisitos:
 
@@ -36,13 +46,11 @@ A priorização seguiu uma sequência estruturada de etapas para garantir uma an
 
 6. Por fim, os requisitos foram organizados por ordem decrescente de prioridade, o que ajudou a destacar aqueles com maior retorno e menor esforço técnico envolvido.
 
-## 3. First Things First
+## First Things First
 
-### 3.1 Descrição dos Requisitos
-Tabela 1 - Descrição dos Requisitos coletados.
+### Descrição dos Requisitos
 
-### 3.1 Descrição dos Requisitos
-Tabela 1 - Descrição dos Requisitos coletados.
+<p style="text-align: center"><b>Tabela 2</b> Descrição dos Requisitos coletados.</p>
 
 | ID    | Descrição                                                                                  |
 |-------|--------------------------------------------------------------------------------------------|
@@ -101,11 +109,13 @@ Tabela 1 - Descrição dos Requisitos coletados.
 | RNF19 | Versão mínima em HTML5 responsiva para acesso via navegador em caso de falha do app         |
 | RNF20 | Clareza na apresentação de dados fiscais                                                    |
 | RNF21 | Integração confiável com serviços externos (Gov.br, instituições financeiras)               |
+
 <font size="3"><p style="text-align: center">Fonte: [Jose Eduardo](https://github.com/jevprado) e [Diassis](https://github.com/Diaxiz), 2025.</p></font>
 
 
 ### Resultados da Priorização FTF
-Tabela 2 - Resultados da Priorização utilizando First Things First (FTF)
+
+<p style="text-align: center"><b>Tabela 3</b> Resultados da Priorização utilizando First Things First (FTF)</p>
 
 | Funcionalidade                                                                                       |   Benefício Relativo |   Penalidade Relativa |   Valor Total |   Valor (%) |   Custo Relativo |   Custo (%) |   Risco Relativo |   Risco (%) |   Prioridade |
 |:-----------------------------------------------------------------------------------------------------|---------------------:|----------------------:|--------------:|------------:|-----------------:|------------:|-----------------:|------------:|-------------:|
@@ -165,13 +175,36 @@ Tabela 2 - Resultados da Priorização utilizando First Things First (FTF)
 | RNF10 - O aplicativo deve ter tempo de resposta inferior a 3 segundos para ações comuns              |                    1 |                     3 |             4 |    0.621118 |                7 |    2.7451   |                4 |    1.60643  |     0.285472 |
 | RNF16 - Tempo de carregamento inicial do app não deve ultrapassar 5 segundos em conexão móvel        |                    1 |                     1 |             2 |    0.310559 |                4 |    1.56863  |                5 |    2.00803  |     0.173659 |
 | **Total** |  |  | **1288** | **100** | **510.0** | **100** | **498.0** | **100** |  |
+
 <font size="3"><p style="text-align: center">Fonte: [Jose Eduardo](https://github.com/jevprado) e [Diassis](https://github.com/Diaxiz), 2025.</p></font>
 
+## Video da execução da técnica de priorização 
 
-## 4. Referências
+<p style="text-align: center"><b>Tabela 4</b> - Video priorização FTF</p>
+
+| Participantes                                | Função           | Data da realização da técnica |
+| -------------------------------------------- | ---------------- | ------------------------------- | 
+| [Diassis](https://github.com/Diaxiz) | Condutor da entrevista e avaliador técnico do custo e risco   | 01/07/2025                        |
+| [Jose Eduardo](https://github.com/jevprado) | Observador na entrevista  e avaliador técnico do custo e risco  | 01/07/2025                     |
+| Fernando dos Santos                     | Usuário          | 01/07/2025                      |
+
+
+<font size="3"><p style="text-align: center">Fonte: [Jose Eduardo](https://github.com/jevprado), 2025.</p></font>
+
+<iframe width="820" height="450" 
+        src="https://www.youtube.com/embed/i00kvPj-Xgo" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+</iframe>
+
+## Referências
 
 > WIEGERS, Karl E.; BEATTY, Joy. *Software Requirements*. 3. ed. Microsoft Press, 2013. cap. 16, p. 313–329.
 ![Página da Referência Aqui](../../assets/referencia-imagens/referencia-ftf01.png)
+
 
 ## 5. Histórico de versões
 
@@ -180,6 +213,6 @@ Tabela 2 - Resultados da Priorização utilizando First Things First (FTF)
 | `1.0` | 03/05/2025 | Primeira Versão do FTF | [Diassis](https://github.com/Diaxiz) e [Marco](https://github.com/marcomarquesdc)  | [José Eduardo](https://github.com/jevprado) |
 | `1.1` | 03/05/2025 | Correção no texto | [Diassis](https://github.com/Diaxiz) e [Marco](https://github.com/marcomarquesdc) | [José Eduardo](https://github.com/jevprado) | 
 | `1.2` | 11/05/2025 | Correção de texto | [Diassis](https://github.com/Diaxiz) e [Marco](https://github.com/marcomarquesdc)  | [José Eduardo](https://github.com/jevprado) |
-| `2.0` | 11/05/2025 | Correção dos requisitos, e implementação do FTF com usuário, e sua respectiva validação. Imagem de referência adicionada. | [Diassis](https://github.com/Diaxiz) e [José Eduardo](https://github.com/jevprado) | [Thales Germano](https://github.com/thalesgvl) |
-| `2.1` | 11/05/2025 | Padronizando o histórico de versões igual ao dos outros artefatos anteriores | [José Eduardo](https://github.com/jevprado) | [Thales Germano](https://github.com/thalesgvl) |
-
+| `2.0` | 02/07/2025 | Correção dos requisitos, e implementação do FTF com usuário, e sua respectiva validação. Imagem de referência adicionada. | [Diassis](https://github.com/Diaxiz) e [José Eduardo](https://github.com/jevprado) | [Thales Germano](https://github.com/thalesgvl) |
+| `2.1` | 02/07/2025 | Padronizando o histórico de versões igual ao dos outros artefatos anteriores | [José Eduardo](https://github.com/jevprado) | [Thales Germano](https://github.com/thalesgvl) |
+| `2.2` | 05/07/2025 | Adicionando o vídeo da técnica | [José Eduardo](https://github.com/jevprado) | Revisor aqui |
